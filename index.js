@@ -9,16 +9,16 @@ const returnLastTwoDrivers = function (drivers) {
 
 const selectingDrivers = [returnFirstTwoDrivers, returnLastTwoDrivers];
 
-function createFareMultiplier(multiplier) {
-  return function (fare) {
-    return fare * multiplier;
+const createFareMultiplier = function (multiplyValue) {
+  return function (value) {
+    return multiplyValue * value;
   };
-}
+};
 
 const fareDoubler = createFareMultiplier(2);
 
 const fareTripler = createFareMultiplier(3);
 
-function selectDifferentDrivers(drivers, fn) {
-  return fn(drivers);
-}
+const selectDifferentDrivers = function (drivers, driversToReturn) {
+  return driversToReturn(drivers);
+};
